@@ -1,0 +1,54 @@
+@import "../../Variables.scss";
+@import "../../mixin/media-query.scss";
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $footer-background-color;
+    height: 277px;
+    margin-top: 50px;
+
+    &__img{
+        height: 179px;
+        width: 217px;
+    }
+
+    &__container {
+        width: 424px;
+        height: 171px;
+        color: #FFFFFF;
+        font-weight: 700;
+        font-size: 18px;
+    }
+}
+
+@include mq(desktop, max) {
+    
+    .footer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: auto;
+
+        &__img {
+            display: none;
+        }
+    }
+
+    
+    
+}
+
+
+@include mq(tablet, max) {
+    .footer {
+        
+        &__container {
+            width: 90%;
+            margin-bottom: 10px;
+            padding-left: 10px;
+        }
+    }
+}

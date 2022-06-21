@@ -1,0 +1,244 @@
+@import "../../Variables.scss";
+@import "../../mixin/media-query.scss";
+
+body {
+    margin: 0;
+}
+
+.btn{
+    &__container{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    &__newRecord {
+        width: 197px;
+        height: 46px;
+        margin: 64px 62px 0 0;
+        border-radius: 12px;
+        border: none;
+        background-color: $btn-primary-color;
+        color: $text-color;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        
+        &:hover {
+            background-color: $btn-secondary-color;
+            cursor: pointer;
+        }
+    }
+}
+
+.top-news {
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 36px;
+        margin-left: 108px;
+        margin-top: 93px;
+    }
+}
+
+.logo{
+    &__container{
+        display: flex;
+        justify-content: center;
+        margin-top: 73px;
+    }
+    &__definition {
+        display: flex;
+        justify-content: center;
+        padding-left: 270px;
+        height: 20px;
+        font-weight: 700;
+        font-size: 14px;
+        color: #484848;
+    }
+}
+
+.header {
+    &__container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    &__content {
+        height: 36px;
+        width: 692px;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 36px;
+        color: #090A0A;
+    }
+}
+
+.search{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 646px;
+        height: 48px;
+        border: 2px solid $btn-primary-color;
+        border-radius: 8px;
+    }
+
+    &__icon {
+        height: 18px;
+        width: 18px;
+        margin: 15px;
+    }
+
+    &__input {
+        width: 582px;
+        height: 16px;
+        border: none ;
+        padding-left: 10px;
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__btn {
+        width: 138px;
+        height: 46px;
+        margin-left: 11px;
+        background-color: $btn-primary-color;
+        color: $text-color;
+        border-radius: 12px;
+        border: none;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        &:hover {
+            background-color: $btn-secondary-color;
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+.results {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 130px;
+
+    &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width:717px;
+    height:248px;
+    margin-top: 16px;
+    border: 1px solid #484848;
+    border-radius: 24px;
+    }
+
+    &__container{
+        margin-left: 10px;
+        margin-top: 16px;
+        width: 100%;
+        height: 63px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+    }
+
+    &__mark{
+        width: 18px;
+        height: 22px;
+        margin-left: 27px;
+    }
+
+    &__name {
+        font-weight: 400;
+        font-size: 16px;
+        color: #090A0A;
+    }
+
+    &__location {
+        font-weight: 400;
+        font-size: 14px;
+        color: #72777A;
+    }
+
+    &__showmore {
+        font-weight: 700;
+        font-size: 16px;
+        color: #090A0A;
+        cursor: pointer;
+    }
+}
+
+
+@include mq(tablet, max) {
+    .mainpage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn{
+        &__container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__newRecord{
+            margin: 10px 0 0 0;
+        }
+}
+    .search {
+        width: 90%;
+        margin: 0;
+
+        &__container {
+            width: 100%;
+            margin: 0;
+        }
+
+        &__input {
+            width: 100%;
+            margin: 0;
+        }
+
+    }
+
+    .top-news {
+        display: none;
+    }
+
+    .header{
+        &__content {
+            width: 300px;
+        }
+    }
+
+    .results {
+        width: 90%;
+        margin: 0;
+    }
+}

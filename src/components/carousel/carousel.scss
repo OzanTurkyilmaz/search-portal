@@ -1,0 +1,41 @@
+@import "../../mixin/media-query.scss";
+
+.news {
+    width: 80%;
+    margin-left: 120px;
+
+    &__container {
+      width: 327px;
+    
+    }
+
+    &__img {
+      width: 327px;
+      height: 195px;
+    }
+
+    &__header {
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    &__info{
+      font-weight: 400;
+      font-size: 12px;
+      color: #6C7072;
+    }
+}
+
+
+.slick-slide > div {
+    margin: 0 10px;
+  }
+  .slick-list {
+    margin: 0 -10px;
+  }
+
+  @include mq(tablet, max) {
+      .news {
+        display: none;
+      }
+  }

@@ -1,0 +1,274 @@
+@import "../../Variables.scss";
+@import "../../mixin/media-query.scss";
+
+.listpage {
+    display: flex;
+    flex-direction: column;
+    &__navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 176px;
+    }
+    &__logo{
+        width: 149px;
+        height: 63px;
+    }
+    &__search {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    &__searchedList{
+        width: 726px;
+        height: 320px;
+    }
+
+    &__wrapper {
+        cursor: pointer;
+        :hover{
+            background-color: rgba(79, 117, 194, 0.21);
+            border-radius: 8px;
+        }
+    }
+
+    &__listItem {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+    }
+
+    &__date {
+        float: right;
+        font-weight: 500;
+        font-size: 16px;
+        color: #484848;
+    }
+
+    &__hr {
+        width: 80%;
+    }
+
+    &__icon {
+        width: 18px;
+        height: 22px;
+    }
+
+    &__name {
+        width: 151px;
+        height: 20px;
+        font-weight: 400;
+        font-size: 16px;
+        color: #090A0A;
+    }
+
+    &__country {
+        font-weight: 400;
+        font-size: 14px;
+        color: #72777A;
+    }
+
+    &__company {
+        font-weight: 400;
+        font-size: 16px;
+        color: #484848;
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        margin-left: 18px;
+        width: 155px;
+    }
+
+    &__orderby {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 126px;
+        height: 29px;
+        background: #F3F2F2;
+        border: 1px solid #414141;
+        border-radius: 8px;
+        cursor: pointer;
+
+    }
+
+    &__btn
+    {
+        width: 197px;
+        height: 46px;
+        border-radius: 12px;
+        border: none;
+        background-color: $btn-primary-color;
+        color: $text-color;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        
+        &:hover {
+            background-color: $btn-secondary-color;
+            cursor: pointer;
+        }
+    }
+
+    &__ascending {
+
+        &__container {
+            border: 1px solid #8F8F8F;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-top: 16px;
+            width: 155px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        &__btn{
+            background-color: #FFFFFF;
+            width: 138px;
+            height: 30px;
+            font-size: 14px;
+            font-weight: 500;
+            border: none;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: flex-start;
+            cursor: pointer;
+            border-radius: 8px;
+            &:hover {
+                background-color: #B3B3B3;
+                color: #FFFFFF;
+            }
+
+            &-hidden {
+                visibility: hidden;
+            }
+        }
+
+       
+    }
+
+    &__main {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__pagination {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+
+    }
+
+    &__pages {
+        width: 24px;
+        height: 24px;
+        margin-left: 11px;
+        margin-bottom: 11px;
+        list-style: none;
+        border: 1px solid #484848;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    
+}
+
+p {
+    margin: 0 0 4px 0;
+}
+
+@include mq(desktop, max) {
+    
+
+    .search{
+        &__container {
+            width: 400px;
+        }
+    }
+    
+  }
+
+@include mq(tablet, max) {
+    .listpage{
+        &__navbar {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+
+        &__logo {
+            margin-top: 50px;
+        }
+
+        &__search{
+            width: 90%;
+            order: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__btn {
+            margin-bottom: 5px;
+        }
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 100px;   
+        }
+
+        &__main {
+            margin-top: 125px;
+        }
+
+        &__searchedList {
+            width: 90%;
+        }
+
+        &__orderby {
+            margin-top: 75px;
+            margin-bottom: 5px;
+        }
+
+    }
+
+    .search{
+        &__container {
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        &__input {
+            width: 100%;
+        }
+
+    }
+
+}
