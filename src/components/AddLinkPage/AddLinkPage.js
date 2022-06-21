@@ -174,11 +174,10 @@ export default function AddLinkPage() {
       </div>
 
       
-      
         {isSubmit
-          ? <div className="addlink__alert">
+          ? !formErrors ? <div className="addlink__alert">
             <div>
-              <p className="addlink__alert__header">Error while adding link element</p>
+             <p className="addlink__alert__header">Error while adding link element</p>
               {Object.values(formErrors).map((item) => <p>{item}</p>)}
             </div>
             <div>
@@ -188,6 +187,10 @@ export default function AddLinkPage() {
             </div>
               
           </div>
+          :<div className="addlink__alert">
+            <p>Form added</p>
+            <div className="addlink__alert__success">Success</div>
+            </div>
           : null}
       </div>
   );

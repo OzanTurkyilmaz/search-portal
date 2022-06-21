@@ -117,6 +117,17 @@
             align-items: center;
             justify-content: center;
         }
+
+        &__success {
+            width: 70px;
+            height: 32px;
+            background-color: #34dd59;
+            color: #FFFFFF;
+            border-radius: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 }
 
